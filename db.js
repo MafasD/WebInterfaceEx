@@ -27,41 +27,17 @@ const Product = db.define('products', {
 		autoIncrement: true,
 		primaryKey: true
 	},
-	Title: {
-		Sequelize.STRING,
-		allowNull: false
-	},
-	Description: {}
-		Sequelize.STRING,
-		allowNull: false
-	},
-	Category: {
-		Sequelize.STRING,
-		allowNull: false
-	},
-	Location: {
-		Sequelize.STRING,
-		allowNull: false
-	},
 	Price: {
 		type: Sequelize.FLOAT,
 		allowNull: false,
 		defaultValue: 0.0
-	},
-	DateOfPosting: {
-		Sequelize.STRING,
-		allowNull: false
-	},
-	DeliveryType: {
-		Sequelize.STRING,
-		allowNull: false
-	},
-	SellerInfo: {
-		Sequelize.STRING,
-		allowNull: false
-	},
+	}
 })
 
-export = module.exports = {
+db.sync()
+	.then(() => console.log("Database has been synced"))
+	.catch((err) => console.error("Error in creating database"))
+
+exports = module.exports = {
 	User, Product
 }
