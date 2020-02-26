@@ -17,7 +17,7 @@ const User = db.define('users', {
 	},
 	name: {
 		type: Sequelize.STRING,
-		allowNull: false
+		allowNull: false,
 	}
 })
 
@@ -27,10 +27,38 @@ const Product = db.define('products', {
 		autoIncrement: true,
 		primaryKey: true
 	},
-	Price: {
+	title: {
+		type: Sequelize.STRING,
+		allowNull: false
+	},
+	description: {
+		type: Sequelize.STRING,
+		allowNull: false
+	},
+	category: {
+		type: Sequelize.STRING,
+		allowNull: false
+	},
+	location: {
+		type: Sequelize.STRING,
+		allowNull: false
+	},
+	price: {
 		type: Sequelize.FLOAT,
 		allowNull: false,
 		defaultValue: 0.0
+	},
+	date: {
+		type: Sequelize.STRING,
+		allowNull: false
+	},
+	delivery: {
+		type: Sequelize.STRING,
+		allowNull: false
+	},
+	seller: {
+		type: Sequelize.STRING,
+		allowNull: false
 	}
 })
 
