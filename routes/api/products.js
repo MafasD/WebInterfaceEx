@@ -15,7 +15,6 @@ route.get('/', (req, res) => {
 })
 
 route.post('/', (req, res) => {
-	//Validate the values
 	if (isNaN(req.body.price)) {
 		return res.status(403).send({
 			error: "Price is not a valid number"

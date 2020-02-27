@@ -25,22 +25,14 @@ function createProductCard (product) {
     <div class="col-4 card mx-2 p-4">
         <h4 class="product-title">${product.title}</h4>
         <div class="product-description">${product.description}</div>
-        <div class="row">
-        <div class="product-category">${product.category}</div>
-        <div class="row">
+        <div class="product-category">Category: ${product.category}</div>
         <div class="product-location">Location: ${product.location}</div>
-        <div class="row">
+        <div class="product-date">Date of posting: ${product.date}</div>
+        <div class="product-delivery">Delivery: ${product.delivery}</div>
+        <div class="product-seller">Seller information: ${product.seller}</div>
         <div class="col m-3 p-3">
-            <b> Price: ${product.price}eur</b>
+            <b> Price: ${product.price} eur</b>
         </div>
-        <div class="row">
-        <div class="product-date">${product.date}</div>
-        <div class="row">
-        <div class="product-delivery">${product.delivery}</div>
-        <div class="row">
-        <div class="product-seller">${product.seller}</div>
-            <button class="col btn btn-primary m-3">Add to cart</button> 
-        </div>
-    </div>`
-        )
+    </div>
+    `)
 }

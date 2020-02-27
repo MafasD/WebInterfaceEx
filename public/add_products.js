@@ -20,7 +20,7 @@ $(function () {
             productDelivery.val(),
             productSeller.val(),
             function (addedProduct) {
-                window.alert("Added " + addedProduct.name + " to Database")
+                window.alert("Added " + addedProduct.title + " to Database")
             }
         )
 

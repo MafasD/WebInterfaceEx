@@ -2,7 +2,7 @@ const User = require('../../db').User
 const route = require('express').Router()
 
 route.get('/', (req, res) => {
-//send an array of all users from db here
+//get an array of all users from db
 
 	User.findAll()
 	.then((users) => {
@@ -16,7 +16,7 @@ route.get('/', (req, res) => {
 })
 
 route.post('/', (req, res) => {
-	//req should have name, create new user
+	//create new user
 
 	User.create({
 		name: req.body.name

@@ -4,8 +4,8 @@ const db = new Sequelize('dbshop', 'dbshopper', 'dbpass', {
 	host: 'localhost',
 	dialect: 'mysql',
 	pool: {
-		min: 0,
 		max: 5,
+		min: 0,
 	}
 })
 
