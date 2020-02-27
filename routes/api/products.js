@@ -12,7 +12,6 @@ route.get('/', (req, res) => {
 			error: "Could not retrieve products"
 		})
 	})
-
 })
 
 route.post('/', (req, res) => {
